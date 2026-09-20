@@ -1,0 +1,422 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f0f0f;
+        color: #f5f5f5;
+        line-height: 1.6;
+
+}
+
+/* ================================
+   GENERAL
+================================ */
+
+a{
+
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+header {
+    width:100%;
+    border-bottom:1px solid#222;
+}
+
+nav {
+
+    width: min(1100px, 90%);
+    margin:0 auto;
+    min-height:80px;
+
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+.logo {
+
+    font-size:1.4rem;
+    font-weight:700;
+    letter-spacing:2px;     
+}
+
+.nav-links {
+
+    display:flex;
+    gap:30px;
+
+}
+
+.nav-links a {
+
+    color: #aaa;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+
+}
+
+.nav-links a:hover {
+
+    color: #fff;
+}
+
+/* ================================
+   HERO
+================================ */
+
+#home {
+    min-height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 100px 0;
+}
+
+#home > p:first-child {
+    color: #888;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+#home h1 {
+    max-width: 850px;
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+}
+
+#home p:last-child {
+    max-width: 650px;
+
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 50px;
+}
+
+.section-heading span {
+    color: #666;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* ================================
+   PROJECTS
+================================ */
+
+#projects {
+    padding: 120px 0;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project {
+    padding: 30px;
+
+    border: 1px solid #222;
+    background: #121212;
+
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project:hover {
+    border-color: #444;
+    transform: translateY(-4px);
+}
+
+.project h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project p {
+    color: #999;
+    font-size: 0.95rem;
+}
+
+/* ================================
+   ABOUT
+================================ */
+
+#about {
+    padding: 120px 0;
+}
+
+#about p {
+    max-width: 750px;
+
+    color: #aaa;
+    font-size: 1.05rem;
+
+    margin-bottom: 20px;
+}
+
+#about p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ================================
+   STACK
+================================ */
+
+#stack {
+    padding: 120px 0;
+}
+
+#stack ul {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#stack li {
+    padding: 10px 18px;
+
+    border: 1px solid #222;
+    background: #121212;
+
+    color: #aaa;
+    font-size: 0.95rem;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+#stack li:hover {
+    border-color: #444;
+    color: #fff;
+}
+
+    /* ================================
+   CONTACT
+================================ */
+
+#contact {
+    padding: 120px 0;
+}
+
+#contact p {
+    color: #aaa;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+#contact a {
+    color: #f5f5f5;
+    border-bottom: 1px solid #444;
+
+    transition: border-color 0.2s ease;
+}
+
+#contact a:hover {
+    border-color: #fff;
+}
+
+
+/* ================================
+   CLOSING
+================================ */
+
+#closing {
+    padding: 120px 0 60px;
+
+    border-top: 1px solid #222;
+
+    text-align: center;
+}
+
+.closing-message {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.closing-subtext {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+#closing .nav-links {
+    justify-content: center;
+}
+
+#closing .nav-links a {
+    color: #888;
+}
+
+#closing .nav-links a:hover {
+    color: #fff;
+}
+
+main > p:last-child {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 0 0 40px;
+
+    color: #555;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    nav {
+        min-height: 70px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    #home {
+        min-height: 70vh;
+        padding: 80px 0;
+    }
+
+    #home h1 {
+        font-size: clamp(2.5rem, 11vw, 4rem);
+        letter-spacing: -1.5px;
+    }
+
+    #home p:last-child {
+        font-size: 1rem;
+    }
+
+    #projects,
+    #about,
+    #stack,
+    #contact {
+        padding: 90px 0;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.7rem;
+    }
+
+    .project {
+        min-height: 180px;
+    }
+
+    #closing {
+        padding: 90px 0 50px;
+    }
+
+    .closing-message {
+        font-size: 1.7rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    nav {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    #home h1 {
+        font-size: 2.7rem;
+    }
+
+    .project {
+        padding: 24px;
+    }
+
+    #closing .nav-links {
+        gap: 18px;
+    }
+}
+
