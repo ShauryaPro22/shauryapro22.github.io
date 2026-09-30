@@ -15,30 +15,68 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background:
-        radial-gradient(circle at 15% 10%, rgba(90, 90, 255, 0.08), transparent 28%),
-        radial-gradient(circle at 85% 35%, rgba(0, 200, 255, 0.05), transparent 25%),
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(90, 90, 255, 0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(0, 200, 255, 0.05),
+            transparent 25%
+        ),
         #0b0b0d;
+
     color: #f5f5f5;
     line-height: 1.6;
+
     overflow-x: hidden;
 }
 
-/* subtle page texture */
+
+/* =========================================================
+   SUBTLE BACKGROUND GRID
+========================================================= */
 
 body::before {
     content: "";
+
     position: fixed;
     inset: 0;
+
     pointer-events: none;
+
     opacity: 0.025;
+
     background-image:
-        linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+        linear-gradient(
+            rgba(255, 255, 255, 0.5) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.5) 1px,
+            transparent 1px
+        );
+
     background-size: 40px 40px;
-    mask-image: linear-gradient(to bottom, black, transparent 80%);
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 80%
+        );
+
     z-index: -1;
 }
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
 
 a {
     color: inherit;
@@ -57,20 +95,25 @@ section {
 
 header {
     width: 100%;
+
     position: sticky;
     top: 0;
+
     z-index: 100;
 
     background: rgba(11, 11, 13, 0.72);
+
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 nav {
     width: min(1100px, 90%);
+
     margin: 0 auto;
+
     min-height: 76px;
 
     display: flex;
@@ -87,16 +130,18 @@ nav {
 
     border-radius: 13px;
 
-    background: linear-gradient(
-        145deg,
-        rgba(255,255,255,0.12),
-        rgba(255,255,255,0.035)
-    );
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.035)
+        );
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     font-size: 0.9rem;
     font-weight: 700;
+
     letter-spacing: 1px;
 
     transition:
@@ -106,7 +151,8 @@ nav {
 
 .logo:hover {
     transform: translateY(-2px);
-    background: rgba(255,255,255,0.12);
+
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .nav-links {
@@ -119,6 +165,7 @@ nav {
     position: relative;
 
     color: #888;
+
     font-size: 0.9rem;
 
     transition:
@@ -128,7 +175,9 @@ nav {
 
 .nav-links a::after {
     content: "";
+
     position: absolute;
+
     left: 0;
     bottom: -7px;
 
@@ -142,6 +191,7 @@ nav {
 
 .nav-links a:hover {
     color: #fff;
+
     transform: translateY(-1px);
 }
 
@@ -166,10 +216,12 @@ nav {
     position: relative;
 }
 
-/* decorative glow */
+
+/* Hero background glow */
 
 #home::before {
     content: "";
+
     position: absolute;
 
     width: 320px;
@@ -181,15 +233,40 @@ nav {
     background: rgba(100, 100, 255, 0.09);
 
     filter: blur(100px);
+
     border-radius: 50%;
 
     pointer-events: none;
 }
 
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+
+/* Hero subtitle */
+
 #home h3 {
     color: #888;
 
     font-size: 0.95rem;
+
     font-weight: 500;
 
     letter-spacing: 1.5px;
@@ -197,12 +274,17 @@ nav {
     margin-bottom: 18px;
 }
 
+
+/* Location */
+
 .location {
     display: flex;
     align-items: center;
+
     gap: 9px;
 
     color: #777;
+
     font-size: 0.85rem;
 
     margin-bottom: 25px;
@@ -217,30 +299,39 @@ nav {
     background: #7dff9b;
 
     box-shadow:
-        0 0 0 4px rgba(125,255,155,0.08),
-        0 0 12px rgba(125,255,155,0.35);
+        0 0 0 4px rgba(125, 255, 155, 0.08),
+        0 0 12px rgba(125, 255, 155, 0.35);
 }
+
+
+/* Hero heading */
 
 #home h1 {
     max-width: 900px;
 
     font-size: clamp(3.5rem, 8vw, 7rem);
+
     line-height: 0.95;
 
     letter-spacing: -5px;
 
     margin-bottom: 32px;
 
-    background: linear-gradient(
-        120deg,
-        #ffffff 20%,
-        #bcbcbc 80%
-    );
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff 20%,
+            #bcbcbc 80%
+        );
 
     -webkit-background-clip: text;
     background-clip: text;
+
     color: transparent;
 }
+
+
+/* Hero description */
 
 #home h2 {
     max-width: 720px;
@@ -248,6 +339,7 @@ nav {
     color: #999;
 
     font-size: clamp(1rem, 2vw, 1.2rem);
+
     font-weight: 400;
 
     line-height: 1.7;
@@ -261,12 +353,66 @@ nav {
 
 
 /* =========================================================
+   PROFILE PICTURE
+========================================================= */
+
+.profile-picture {
+    flex-shrink: 0;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    padding: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.03)
+        );
+
+    box-shadow:
+        0 0 60px rgba(100, 100, 255, 0.12),
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.profile-picture:hover {
+    transform: translateY(-6px) scale(1.02);
+
+    box-shadow:
+        0 0 80px rgba(100, 100, 255, 0.18),
+        0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #0b0b0d;
+}
+
+
+/* =========================================================
    SECTION HEADINGS
 ========================================================= */
 
 .section-heading {
     display: flex;
+
     align-items: center;
+
     gap: 14px;
 
     margin-bottom: 38px;
@@ -276,6 +422,7 @@ nav {
     color: #555;
 
     font-size: 0.75rem;
+
     font-weight: 700;
 
     letter-spacing: 1.5px;
@@ -283,6 +430,7 @@ nav {
 
 .section-heading h2 {
     font-size: 1.9rem;
+
     font-weight: 600;
 
     letter-spacing: -0.7px;
@@ -292,13 +440,15 @@ nav {
     content: "";
 
     height: 1px;
+
     flex: 1;
 
-    background: linear-gradient(
-        to right,
-        rgba(255,255,255,0.08),
-        transparent
-    );
+    background:
+        linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.08),
+            transparent
+        );
 }
 
 
@@ -318,15 +468,15 @@ nav {
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.055),
-            rgba(255,255,255,0.018)
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
         );
 
-    border: 1px solid rgba(255,255,255,0.07);
+    border: 1px solid rgba(255, 255, 255, 0.07);
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.04),
-        0 20px 60px rgba(0,0,0,0.18);
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 20px 60px rgba(0, 0, 0, 0.18);
 
     overflow-x: auto;
 }
@@ -389,15 +539,15 @@ nav {
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.065),
-            rgba(255,255,255,0.018)
+            rgba(255, 255, 255, 0.065),
+            rgba(255, 255, 255, 0.018)
         );
 
-    border: 1px solid rgba(255,255,255,0.075);
+    border: 1px solid rgba(255, 255, 255, 0.075);
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.04),
-        0 15px 40px rgba(0,0,0,0.15);
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 15px 40px rgba(0, 0, 0, 0.15);
 
     transition:
         transform 0.3s ease,
@@ -406,7 +556,8 @@ nav {
         box-shadow 0.3s ease;
 }
 
-/* glow inside card */
+
+/* Card glow */
 
 .project::before {
     content: "";
@@ -421,7 +572,7 @@ nav {
 
     border-radius: 50%;
 
-    background: rgba(120,120,255,0.09);
+    background: rgba(120, 120, 255, 0.09);
 
     filter: blur(40px);
 
@@ -431,18 +582,18 @@ nav {
 .project:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(255,255,255,0.16);
+    border-color: rgba(255, 255, 255, 0.16);
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.085),
-            rgba(255,255,255,0.025)
+            rgba(255, 255, 255, 0.085),
+            rgba(255, 255, 255, 0.025)
         );
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.06),
-        0 25px 60px rgba(0,0,0,0.28);
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 25px 60px rgba(0, 0, 0, 0.28);
 }
 
 .project:hover::before {
@@ -453,6 +604,7 @@ nav {
     position: relative;
 
     font-size: 1.25rem;
+
     font-weight: 600;
 
     margin-bottom: 18px;
@@ -481,6 +633,7 @@ nav {
     list-style: none;
 
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 10px;
@@ -494,11 +647,11 @@ nav {
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.065),
-            rgba(255,255,255,0.025)
+            rgba(255, 255, 255, 0.065),
+            rgba(255, 255, 255, 0.025)
         );
 
-    border: 1px solid rgba(255,255,255,0.07);
+    border: 1px solid rgba(255, 255, 255, 0.07);
 
     color: #999;
 
@@ -516,9 +669,9 @@ nav {
 
     color: #fff;
 
-    border-color: rgba(255,255,255,0.17);
+    border-color: rgba(255, 255, 255, 0.17);
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 
@@ -550,6 +703,7 @@ nav {
 
 #contact a:hover {
     color: #fff;
+
     border-color: #fff;
 }
 
@@ -560,17 +714,19 @@ nav {
 
 #closing {
     width: min(1100px, 90%);
+
     margin: 40px auto 0;
 
     padding: 90px 0 55px;
 
-    border-top: 1px solid rgba(255,255,255,0.07);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
 
     text-align: center;
 }
 
 .closing-message {
     font-size: 2rem;
+
     font-weight: 600;
 
     margin-bottom: 8px;
@@ -596,6 +752,7 @@ nav {
 
 main > p:last-child {
     width: min(1100px, 90%);
+
     margin: 0 auto;
 
     padding: 0 0 35px;
@@ -609,7 +766,7 @@ main > p:last-child {
 
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE — TABLET
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -626,15 +783,42 @@ main > p:last-child {
         font-size: 0.82rem;
     }
 
+
+    /* HERO */
+
     #home {
         min-height: 75vh;
+
         padding: 80px 0;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+
+        gap: 35px;
+    }
+
+    .profile-picture {
+        width: 190px;
+        height: 190px;
+
+        align-self: center;
     }
 
     #home h1 {
         font-size: clamp(3rem, 12vw, 5rem);
+
         letter-spacing: -3px;
     }
+
+    #home h2 {
+        font-size: 1rem;
+    }
+
+
+    /* SECTIONS */
 
     #projects,
     #about,
@@ -642,6 +826,9 @@ main > p:last-child {
     #contact {
         padding: 75px 0;
     }
+
+
+    /* PROJECTS */
 
     .projects {
         grid-template-columns: 1fr;
@@ -651,6 +838,9 @@ main > p:last-child {
         min-height: 200px;
     }
 
+
+    /* CLOSING */
+
     #closing {
         padding: 75px 0 45px;
     }
@@ -658,14 +848,16 @@ main > p:last-child {
 
 
 /* =========================================================
-   SMALL PHONES
+   RESPONSIVE — SMALL PHONES
 ========================================================= */
 
 @media (max-width: 480px) {
 
     nav {
         align-items: flex-start;
+
         flex-direction: column;
+
         justify-content: center;
 
         gap: 9px;
@@ -675,11 +867,16 @@ main > p:last-child {
 
     .nav-links {
         gap: 14px;
+
         flex-wrap: wrap;
     }
 
+
+    /* HERO */
+
     #home h1 {
         font-size: 3rem;
+
         letter-spacing: -2.5px;
     }
 
@@ -687,15 +884,31 @@ main > p:last-child {
         font-size: 0.95rem;
     }
 
+    .profile-picture {
+        width: 170px;
+        height: 170px;
+    }
+
+
+    /* PROJECTS */
+
     .project {
         padding: 24px;
+
         border-radius: 18px;
     }
 
+
+    /* GITHUB */
+
     .calendar {
         padding: 18px;
+
         border-radius: 18px;
     }
+
+
+    /* HEADINGS */
 
     .section-heading {
         margin-bottom: 28px;
@@ -704,6 +917,9 @@ main > p:last-child {
     .section-heading h2 {
         font-size: 1.6rem;
     }
+
+
+    /* CLOSING */
 
     #closing .nav-links {
         gap: 18px;
