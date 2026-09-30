@@ -1,7 +1,7 @@
 // Project links
 
 const projectLinks = {
-    calculator: "https://github.com/ShauryaPro22/shauryapro22.github.io/blob/main/Python%20calculator",
+    calculator: "https://github.com/ShauryaPro22/shauryapro22.github.io/blob/main/Python%20calculator.py",
     "tic-tac-toe": "PASTE-TIC-TAC-TOE-LINK-HERE",
     titanic: "PASTE-TITANIC-LINK-HERE",
     "costa-concordia": "PASTE-COSTA-CONCORDIA-LINK-HERE",
