@@ -926,3 +926,8 @@ main > p:last-child {
     }
 }
 ```
+
+.location-separator {
+    margin: 0 8px;
+    opacity: 0.5;
+}
