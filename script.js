@@ -10,7 +10,7 @@ const projectLinks = {
 
     "tic-tac-toe": "https://github.com/ShauryaPro22/shauryapro22.github.io/blob/main/TIC-TAC-TOE%20by%20Shaurya.py",
 
-    titanic: "https://www.tinkercad.com/things/hjfiAHhJu8r-definitely-not-the-sunken-ship-from-1912",
+    titanic: "https://www.tinkercad.com/things/hjfiAHhJu8r-definitely-not-the-sunken-ship-from-1912?sharecode=GFX2zvMNsWDQmkGhvcTWry6rP6IayU0gEHSU36MkNKc",
 
     "costa-concordia": "PASTE-COSTA-CONCORDIA-LINK-HERE",
 
