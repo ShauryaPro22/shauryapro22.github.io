@@ -24,11 +24,15 @@ document.querySelectorAll(".project").forEach(project => {
             window.open(link, "_blank");
         }
 
+    });
+
+});
 
 
-        // Live IST clock
+// Live IST clock
 
 function updateIST() {
+
     const timeElement = document.getElementById("ist-time");
 
     if (!timeElement) return;
@@ -47,8 +51,5 @@ function updateIST() {
 }
 
 updateIST();
+
 setInterval(updateIST, 1000);
-
-    });
-
-});
