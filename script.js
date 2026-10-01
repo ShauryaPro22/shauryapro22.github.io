@@ -24,6 +24,31 @@ document.querySelectorAll(".project").forEach(project => {
             window.open(link, "_blank");
         }
 
+
+
+        // Live IST clock
+
+function updateIST() {
+    const timeElement = document.getElementById("ist-time");
+
+    if (!timeElement) return;
+
+    const now = new Date();
+
+    const istTime = now.toLocaleTimeString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+    });
+
+    timeElement.textContent = istTime + " IST";
+}
+
+updateIST();
+setInterval(updateIST, 1000);
+
     });
 
 });
