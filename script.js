@@ -12,7 +12,7 @@ const projectLinks = {
 
     titanic: "https://www.tinkercad.com/things/hjfiAHhJu8r-definitely-not-the-sunken-ship-from-1912?sharecode=GFX2zvMNsWDQmkGhvcTWry6rP6IayU0gEHSU36MkNKc",
 
-    "costa-concordia": "PASTE-COSTA-CONCORDIA-LINK-HERE",
+    "costa-concordia": "https://www.tinkercad.com/things/1tvKtfUA7C1-definitely-not-a-titanics-father?sharecode=kMFYlXEjjEtUOdm9j7UvRDz_n0SoCYB5lY4gYcTbDSQ",
 
     arduino: "PASTE-ARDUINO-LINK-HERE"
 };
