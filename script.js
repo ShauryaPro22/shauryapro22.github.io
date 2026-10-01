@@ -1,3 +1,6 @@
+console.log("SHAURYA JS LOADED");
+
+
 // Project links
 
 const projectLinks = {
